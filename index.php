@@ -2,7 +2,7 @@
 // 判断表单是否被提交
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 获取用户选择的答案
-    $answer = isset($_POST['ansible_module']) ? $_POST['ansible_module'] : '';
+    $answer = isset($_POST['Q_modulee']) ? $_POST['Q_modulee'] : '';
 
     // 定义正确答案
     $correct_answer = 'Web';
@@ -46,7 +46,7 @@ $shuffled_options = array_combine(array_keys($options), $descriptions);
         <form id="myForm" action="" method="post">
             <div class="question">
                 <?php foreach ($shuffled_options as $key => $description): ?>
-                    <input type="radio" id="<?php echo $key; ?>" name="ansible_module" value="<?php echo $description; ?>" required>
+                    <input type="radio" id="<?php echo $key; ?>" name="Q_modulee" value="<?php echo $description; ?>" required>
                     <label for="<?php echo $key; ?>"><?php echo $key . '. ' . $description; ?></label>
                 <?php endforeach; ?>
             </div>
