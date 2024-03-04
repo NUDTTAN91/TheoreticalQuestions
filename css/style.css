@@ -1,0 +1,151 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+         url('webfonts/JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('webfonts/JetBrainsMono-Bold.woff2') format('woff2'),
+         url('webfonts/JetBrainsMono-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace; /* 应用JetBrains Mono字体 */
+}
+
+.gradient-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    height: 100%;
+    animation: gradientBG 15s ease infinite;
+    background-size: 300% 300%;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2); /* 半透明背景 */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    text-align: left; /* 靠左对齐 */
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.question label {
+    display: block;
+    padding: 8px;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #fff; /* 字体颜色 */
+    background: rgba(255, 255, 255, 0.1); /* 背景颜色 */
+    text-align: left; /* 标签文本靠左对齐 */
+}
+
+form {
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    padding: 8px;
+    margin: 5px 0;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    color: #fff; /* 字体颜色 */
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    background-color: rgba(255, 255, 255, 0.5); /* 选中时的背景颜色 */
+    border-color: #3182ce;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #1a5a9c;
+}
+
+.result {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff; /* 结果字体颜色 */
+}
+
+/* 底部版权信息样式 */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.7); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    -webkit-backdrop-filter: blur(10px); /* Safari浏览器兼容 */
+    z-index: 1000; /* 确保版权信息在最上层 */
+}
+
+/* 为页面内容添加足够的底部边距，以确保版权信息不会覆盖内容 */
+.gradient-background {
+    padding-bottom: 60px; /* 底部边距，根据版权信息高度调整 */
+}
+
+footer a {
+    color: inherit; /* 链接颜色继承父元素的颜色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline; /* 鼠标悬停或聚焦时添加下划线 */
+}
